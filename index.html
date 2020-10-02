@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <title>APParking</title>
+</head>
+<body class="bg-light">
+  <div class="container">
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
+      <img class="mr-3" src="/img/bootstrap-outline.svg" alt="" width="48" height="48">
+      <div class="lh-100">
+        <h6 class="mb-0 text-white lh-100">Bootstrap</h6>
+        <small>Since 2011</small>
+      </div>
+    </div>
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="name" placeholder="Digite o nome do veiculo">
+      
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="licence" placeholder="Digite a placa do veiculo">
+      
+        </div>
+        <button id="send" type="button" class="btn btn-success">Registrar</button>
+    
+      </form>
+      
+    </div>
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Veiculo</th>
+            <th>Placa</th>
+            <th>Horário</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="garage">
+    
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+  
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
