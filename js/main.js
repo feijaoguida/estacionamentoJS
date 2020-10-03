@@ -3,6 +3,23 @@
   const $ = q => document.querySelector(q);
   const getGarage = () => localStorage.garage ? JSON.parse(localStorage.garage) : [];
 
+  function validarPlaca(placa){
+    var resposta = false;
+    const regexPlaca = /^[a-zA-Z]{3}[0-9]{4}$/;
+    const regexPlacaMercosulCarro = /^[a-zA-Z]{3}[0-9]{1}[a-zA-Z]{1}[0-9]{2}$/;
+    const regexPlacaMercosulMoto = /^[a-zA-Z]{3}[0-9]{2}[a-zA-Z]{1}[0-9]{1}$/;
+    if(regexPlaca.test(placa)){
+    resposta = placa;
+    }
+    if(regexPlacaMercosulCarro.test(placa)){
+    resposta = placa;
+    }
+    if(regexPlacaMercosulMoto.test(placa)){
+    resposta = placa;
+    }
+    return resposta;
+   }
+
   function convertPeriod(mil){
     let hor = Math.floor()
 
@@ -60,10 +77,15 @@
   renderGarage();
   $("#send").addEventListener("click", e => {
     const name = $("#name").value;
-    const licence = $("#licence").value;
+    const licence = validarPlaca($("#licence").value);
 
-    if(!name || !licence){
-      alert("os campos são Obrigatórios!");
+    if(!name){
+      alert("Favor informar o nome do Proprietário");
+      return;
+    }
+
+    if(!licence){
+      alert("Favor informar a Placa do Veículo");
       return;
     }
 
